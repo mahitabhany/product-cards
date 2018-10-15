@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+    letter-spacing: 0.25px;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .product-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 50px auto;
+    width: 90%;
+  }
+  
+  .product-card {
+    background: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    padding: 10px;
+    transition: all 0.15s ease;
+    width: 250px;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0px 0px 5px 2px rgba(38, 37, 38, 0.2);
+  }
+  
+  .img-container {
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+  }
+  
+  .img-container img {
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.15s ease;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .hide-img {
+    display: none;
+  }
+  
+  .img-container img.hover-img {
+    z-index: 0;
+  }
+  
+  .product-card:hover .img-container .main-img {
+    z-index: -1;
+  }
+  
+  .swatch-wrap {
+    border-bottom: 1px dashed #DADBDB;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8px 0;
+    width: 100%;
+  }
+  
+  .swatch-wrap .swatch {
+    background: #000000;
+    border: 1px solid #d9d9d9;
+    cursor: pointer;
+    height: 15px;
+    margin-right: 8px;
+    opacity: 0.6;
+    transition: all 0.15s ease;
+    width: 25px;
+  }
+  
+  .swatch-wrap .swatch:hover {
+    opacity: 1;
+  }
+  
+  .swatch-wrap .active-swatch {
+    opacity: 1;
+  }
+  
+  .swatch-wrap .swatch:nth-child(2) {
+    background: white;
+  }
+  
+  .swatch-wrap .swatch:last-child {
+    background: red;
+    margin-right: 0;
+  }
+  
+  .brand-name, .price {
+    color: #262526;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .brand-name {
+    font-size: 14px;
+    height: 30px;
+    margin: 15px 0 5px;
+  }
+  
+  .product-title {
+    color: #444444;
+    font-size: 14px;
+    height: 54px;
+    margin-bottom: 10px;
+  }
+  
+  .romance-copy {
+    color: #008FB0;
+    font-size: 11px;
+    margin-top: 10px;
+  }
+  
+  .review-stars {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .review-stars svg {
+    margin-right: 2px;
+  }
+  
+  .review-stars svg:last-child {
+    margin-right: 0;
+  }
+  
+  .default-star {
+    fill: #D0D3D6;
+  }
+  
+  .review-stars svg:nth-child(-n+4) .default-star {
+    fill: #FFCA38;
+  }
+  
+  .review-count {
+    color: #6D6F72;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
